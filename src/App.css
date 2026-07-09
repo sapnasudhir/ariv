@@ -1,0 +1,111 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--heading);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text-h);
+}
+
+.site-title-icon {
+  color: var(--accent);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-header nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.site-header nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  padding: 64px 32px;
+}
+
+.video-gallery {
+  padding: 0 32px 64px;
+}
+
+.video-gallery h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.video-gallery .swiper {
+  padding: 4px 44px 8px;
+}
+
+.video-gallery .swiper-button-next,
+.video-gallery .swiper-button-prev {
+  color: var(--accent);
+}
+
+.video-gallery .swiper-button-next::after,
+.video-gallery .swiper-button-prev::after {
+  font-size: 18px;
+}
+
+.video-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: left;
+}
+
+.video-card-media {
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  background: var(--code-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  text-align: center;
+  padding: 12px;
+}
+
+.video-card-placeholder {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.video-card-media a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.video-card h3 {
+  font-size: 16px;
+  margin: 0 0 4px;
+  color: var(--text-h);
+}
+
+.video-card-creator {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 24px 32px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+}

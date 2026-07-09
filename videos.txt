@@ -1,0 +1,21 @@
+# Paste YouTube links here, one block per video.
+# Just fill in the Link line for each entry (any YouTube URL format works:
+# watch?v=, youtu.be/, shorts/, embed/). Add or remove blocks as needed —
+# leave a blank line between blocks. Save the file and the site updates
+# automatically while the dev server is running.
+
+Title: Pan Fried Garlic Chilli Chicken
+Creator: @Chef Ajay Kumar
+Link: https://youtu.be/uxP4yNpoCGg?si=T5gMSeAljFUbd8sL
+
+Title: Cottage Pie
+Creator: @foodiligence
+Link: https://youtu.be/I3cXR-m0ihs?si=YAA5RrYN6D1ACyco
+
+Title: Smashed Beef Kababs
+Creator: @foodiligence
+Link: https://youtu.be/7I3HVij8GQI?si=AZe4Ukrngx29QqSL
+
+Title: Garlic Egg Rice
+Creator: @Ghar ka khana vlog
+Link: https://youtu.be/o1k97YJdSxQ?si=RUiNL_82wyHc-OPx
