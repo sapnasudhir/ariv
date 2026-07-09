@@ -1,16 +1,53 @@
-# React + Vite
+# Trending Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+"My Favorite Cooking Trends" — a personal page collecting viral recipe
+videos, built with React + Vite.
 
-Currently, two official plugins are available:
+Live site: https://sapnasudhir.github.io/ariv/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Adding or updating videos
 
-## React Compiler
+Edit `videos.txt` at the project root. One block per video, separated by a
+blank line:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+Title: Baked Feta Pasta
+Creator: @viral_kitchen
+Link: https://www.youtube.com/watch?v=xxxxxxxxxxx
+```
 
-## Expanding the Oxlint configuration
+The `Link` field accepts any YouTube URL format (`watch?v=`, `youtu.be/`,
+`shorts/`, `embed/`, including share links with `?si=...`). Add or remove
+blocks as needed. `src/data/videos.js` parses this file automatically, so
+while the dev server is running your changes hot-reload immediately.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Publishing changes
+
+Once you're happy with your edits, publish them with either:
+
+```
+npm run publish
+```
+
+or, inside a Claude Code session, `/publish`.
+
+This stages, commits, and pushes any changes (it's a no-op if nothing
+changed). Pushing to `master` triggers a GitHub Actions workflow that
+rebuilds the site and redeploys it to GitHub Pages — the live site updates
+within about 30 seconds.
+
+## Local development
+
+```
+npm install
+npm run dev
+```
+
+## Project structure
+
+- `videos.txt` — the video list you edit
+- `src/data/videos.js` — parses `videos.txt` into the data the site uses
+- `src/components/` — `Header`, `Hero`, `VideoGallery`, `VideoCard`, `Footer`
+- `.github/workflows/deploy.yml` — builds and deploys to GitHub Pages on
+  every push to `master`
+- `scripts/publish.js` — the script behind `npm run publish`
