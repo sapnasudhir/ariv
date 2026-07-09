@@ -27,6 +27,7 @@ function parseVideos(text) {
       const title = block.match(/^Title:\s*(.*)$/m)?.[1]?.trim() ?? ''
       const creator = block.match(/^Creator:\s*(.*)$/m)?.[1]?.trim() ?? ''
       const link = block.match(/^Link:\s*(.*)$/m)?.[1]?.trim() ?? ''
+      const twist = block.match(/^Twist:\s*(.*)$/m)?.[1]?.trim() ?? ''
 
       if (!title) return null
 
@@ -34,6 +35,7 @@ function parseVideos(text) {
         title,
         creator,
         id: extractYouTubeId(link),
+        twist,
       }
     })
     .filter(Boolean)

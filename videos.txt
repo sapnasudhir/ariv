@@ -3,6 +3,12 @@
 # watch?v=, youtu.be/, shorts/, embed/). Add or remove blocks as needed —
 # leave a blank line between blocks. Save the file and the site updates
 # automatically while the dev server is running.
+#
+# Optional 4th line per block: Twist: <one line>
+# This file is also regenerated automatically by the /sync-videos skill from
+# the "Ariv Videos" Notion database — hand edits are fine, but will be
+# overwritten by the next /sync-videos run for anything that also exists in
+# Notion.
 
 Title: Pan Fried Garlic Chilli Chicken
 Creator: @Chef Ajay Kumar

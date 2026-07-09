@@ -22,6 +22,7 @@ function VideoCard({ video }) {
       </div>
       <h3>{video.title}</h3>
       <p className="video-card-creator">{video.creator}</p>
+      {video.twist && <p className="video-card-twist">{video.twist}</p>}
     </motion.article>
   )
 }
