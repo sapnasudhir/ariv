@@ -27,17 +27,18 @@ function VideoGallery() {
       <Swiper
         modules={[Navigation]}
         navigation
-        spaceBetween={24}
-        slidesPerView={1}
+        spaceBetween={28}
+        slidesPerView={1.1}
         breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          640: { slidesPerView: 1.6 },
+          1024: { slidesPerView: 2.4 },
         }}
       >
-        {videos.map((video) => (
+        {videos.map((video, index) => (
           <SwiperSlide key={video.title}>
             <VideoCard
               video={video}
+              index={index}
               resetNonce={resetNonces[video.id] || 0}
               onPlay={() => handlePlay(video.id)}
             />

@@ -2,17 +2,22 @@ import { motion } from 'motion/react'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
-function VideoCard({ video, resetNonce, onPlay }) {
+function VideoCard({ video, resetNonce, onPlay, index = 0 }) {
   const hasRealId = video.id && video.id !== 'PASTE_YOUTUBE_ID_HERE'
 
   return (
     <motion.article
       className="video-card"
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
-      whileHover={{ scale: 1.03 }}
-      transition={{ duration: 0.3 }}
+      whileHover={{ scale: 1.03, y: -4 }}
+      whileTap={{ scale: 0.97 }}
+      transition={{
+        opacity: { duration: 0.3, delay: index * 0.05 },
+        y: { type: 'spring', stiffness: 300, damping: 24, delay: index * 0.05 },
+        scale: { type: 'spring', stiffness: 400, damping: 20 },
+      }}
     >
       <div className="video-card-media">
         {hasRealId ? (
