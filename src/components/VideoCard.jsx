@@ -1,7 +1,8 @@
 import { motion } from 'motion/react'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
-function VideoCard({ video }) {
+function VideoCard({ video, resetNonce, onPlay }) {
   const hasRealId = video.id && video.id !== 'PASTE_YOUTUBE_ID_HERE'
 
   return (
@@ -15,7 +16,12 @@ function VideoCard({ video }) {
     >
       <div className="video-card-media">
         {hasRealId ? (
-          <LiteYouTubeEmbed id={video.id} title={video.title} />
+          <LiteYouTubeEmbed
+            key={resetNonce}
+            id={video.id}
+            title={video.title}
+            onIframeAdded={onPlay}
+          />
         ) : (
           <span className="video-card-placeholder">Paste a YouTube ID in src/data/videos.js</span>
         )}
