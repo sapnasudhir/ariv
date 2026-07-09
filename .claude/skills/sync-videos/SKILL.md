@@ -4,9 +4,15 @@ description: Pull YouTube videos from the "Ariv Videos" Notion database, enrich 
 ---
 
 Notion data source: `collection://023c699a-d372-43a5-a257-1988dfc9b3e3`
-(database "Ariv Videos"). Use `notion-query-data-sources` /
-`ReadMcpResourceTool`-style Notion tools against this ID; use
-`notion-update-page` to write fields back to a row.
+(database "Ariv Videos").
+
+**Enumerating rows**: `notion-query-data-sources` (SQL mode) requires a
+Notion Business plan this workspace doesn't have — it will fail with a
+`validation_error` upsell message. Instead, use `notion-search` with
+`data_source_url: "collection://023c699a-d372-43a5-a257-1988dfc9b3e3"` and a
+generic query (e.g. `"video"`), which returns all rows in this small
+database. For each result, `notion-fetch` its page `id` to read current
+property values. Use `notion-update-page` to write fields back.
 
 ## ARIV's voice (apply this to every Twist you write)
 
