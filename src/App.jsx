@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
 import VideoGallery from './components/VideoGallery'
+import AboutMe from './components/AboutMe'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Hero />
       <VideoGallery />
+      <AboutMe />
       <Footer />
     </>
   )
